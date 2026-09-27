@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | CERM</title>
+    <meta name="description" content="Privacy Policy for the CERM app — how community data is stored, encrypted, and protected.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">CERM <span>Monitor</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="subscription.html">Pricing</a></li>
+                <li><a href="terms-of-service.html">Terms</a></li>
+                <li><a href="privacy-policy.html" class="active">Privacy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="glass-card legal-content">
+            <div class="legal-nav">
+                <a href="privacy-policy.html" aria-current="page">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="subscription.html">Pricing</a>
+            </div>
+
+            <h1>Privacy Policy</h1>
+            <div class="last-updated">Last updated: September 2026</div>
+            <p class="legal-intro">At BenDevsPro, we take the privacy and security of your community data seriously. This policy explains how the Community Events Records Monitor (CERM) app handles and protects your information.</p>
+
+            <h2>1. Zero knowledge & data minimization</h2>
+            <p>We do not collect personal data of members of your community. The CERM app is built on a Zero Knowledge architecture coupled with strong encryption. This means BenDevsPro has absolutely no ability to read, view, or access the identities, activities, or performance records of your members.</p>
+
+            <h2>2. Data storage & encryption</h2>
+            <p>Your primary data is stored locally on your device using encrypted SQLCipher databases. When you choose to use our Cloud Sync feature:</p>
+            <ul>
+                <li>Backup files (.cerm) are strictly locked to your specific user identity via Firebase Authentication UID.</li>
+                <li>Files are secured in transit using AES-256-GCM encryption.</li>
+                <li>Our Firebase Storage rules prohibit any user from reading or writing to folders outside of their own authenticated ID.</li>
+            </ul>
+
+            <h2>3. Third-party services</h2>
+            <p>To provide our services, we use industry-standard third-party providers:</p>
+            <ul>
+                <li><strong>Google Firebase:</strong> Used for secure user authentication and cloud backup storage.</li>
+                <li><strong>RevenueCat:</strong> Used strictly to validate subscription status across Android and Desktop platforms (see our <a href="subscription.html">Pricing page</a>). RevenueCat does not have access to your community ledger data.</li>
+            </ul>
+
+            <h2>4. Local access</h2>
+            <p>The app requests local biometric authentication (fingerprint/face unlock) to protect access to the app on your device. This biometric data is processed entirely by your device's operating system and is never transmitted to our servers.</p>
+
+            <h2>5. Your choices</h2>
+            <p>Cloud Sync is optional — you can use CERM entirely offline if you prefer to keep all data local to your device. You can review billing and cancellation terms on our <a href="terms-of-service.html">Terms of Service</a> page.</p>
+
+            <div class="legal-contact">
+                Questions about your privacy? Contact the developer at <a href="mailto:bendevspro@gmail.com">bendevspro@gmail.com</a>.
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">CERM <span>Monitor</span></a>
+                <p class="footer-tagline">A digital ledger for communities, built by BenDevsPro.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="subscription.html">Pricing</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2026 BenDevsPro. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
