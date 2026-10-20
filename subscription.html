@@ -3,117 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing | CERM</title>
-    <meta name="description" content="Simple, transparent pricing for CERM — Free, Silver, Gold, and Platinum tiers for communities of any size.">
+    <title>Plans & Pricing | CERM</title>
+    <meta name="description" content="Transparent pricing for CERM — Free (up to 300 members), Silver (1,000 members + PDF/CSV), Gold (3,000 members + Cloud Sync), and Platinum (Unlimited + Desktop).">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <a href="#main" class="skip-link">Skip to content</a>
 
     <header>
         <nav>
-            <a href="index.html" class="logo">CERM <span>Monitor</span></a>
+            <a href="index.html" class="logo">
+                <span class="logo-medallion">★</span>
+                CERM <span>Workspace</span>
+            </a>
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="user-guide.html">User Guide</a></li>
                 <li><a href="subscription.html" class="active">Pricing</a></li>
                 <li><a href="terms-of-service.html">Terms</a></li>
                 <li><a href="privacy-policy.html">Privacy</a></li>
+                <li>
+                    <a href="https://play.google.com/store/apps/details?id=com.bendevspro.communityeventsrecordsmonitor" target="_blank" rel="noopener" class="btn btn-primary nav-cta-btn">
+                        Get App
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main id="main">
         <div class="section-heading">
-            <h2>Simple, transparent pricing</h2>
-            <p>Scale your community management as you grow. Manage your tier directly within the Google Play Store.</p>
+            <span class="eyebrow">Upgrade Your Workspace</span>
+            <h1>Simple, Transparent Community Pricing</h1>
+            <p>Start free with up to 300 members—upgrade anytime via Google Play as your community, clan, or association expands.</p>
+        </div>
+
+        <!-- Interactive Monthly / Annual Billing Toggle (Matches PaywallDialog.kt) -->
+        <div class="billing-switcher-wrap">
+            <div class="billing-switcher" role="tablist" aria-label="Billing Period">
+                <button type="button" class="billing-btn" id="btnMonthly" data-period="monthly">
+                    Monthly
+                </button>
+                <button type="button" class="billing-btn active" id="btnYearly" data-period="yearly">
+                    Annual <span class="save-pill">SAVE</span>
+                </button>
+            </div>
         </div>
 
         <div class="pricing-grid">
             <!-- Free Tier -->
-            <div class="glass-card pricing-card">
-                <h3 style="color: var(--text-secondary);">Free</h3>
-                <div class="price">$0<span style="font-size: 1rem; color: var(--text-secondary);">/mo</span></div>
-                <div class="price-sub">&nbsp;</div>
+            <div class="pricing-card">
+                <div class="tier-header">
+                    <h3 style="color: var(--text-secondary);">Free</h3>
+                    <span class="pill-badge pill-cyan">STARTER</span>
+                </div>
+                <div class="price" data-monthly="$0" data-yearly="$0">$0<span>/yr</span></div>
+                <p class="price-sub" data-monthly-sub="Free forever for 1 group" data-yearly-sub="Free forever for 1 group">Free forever for 1 group</p>
                 <ul class="features-list">
-                    <li>1 community</li>
-                    <li>Up to 50 members</li>
-                    <li>1 active event</li>
+                    <li><strong>1 Community / Group</strong></li>
+                    <li><strong>Up to 300 Registered Members</strong></li>
+                    <li><strong>1 Active Event</strong> at a time</li>
+                    <li>Cash &amp; Structured In-Kind Ledgers</li>
+                    <li>Locked WhatsApp Roll Call Sharing</li>
+                    <li>Local PIN &amp; Biometric App Lock</li>
                 </ul>
-                <a href="#" class="btn btn-outline" style="width: 100%;">View on Google Play</a>
+                <a href="https://play.google.com/store/apps/details?id=com.bendevspro.communityeventsrecordsmonitor" target="_blank" rel="noopener" class="btn btn-outline" style="width: 100%;">
+                    Download Free on Play Store
+                </a>
             </div>
 
             <!-- Silver Tier -->
-            <div class="glass-card pricing-card">
-                <h3 style="color: var(--emerald-success);">Silver</h3>
-                <div class="price">$1<span style="font-size: 1rem; color: var(--text-secondary);">/mo</span></div>
-                <p class="price-sub">or $10/year (save $2)</p>
+            <div class="pricing-card tier-silver">
+                <div class="tier-header">
+                    <h3 style="color: var(--silver-accent);">Silver</h3>
+                    <span class="pill-badge pill-green">POPULAR</span>
+                </div>
+                <div class="price" data-monthly="$1" data-yearly="$10">$10<span>/yr</span></div>
+                <p class="price-sub" data-monthly-sub="or $10/year (Save $2)" data-yearly-sub="Billed annually (Save $2 vs monthly)">Billed annually (Save $2 vs monthly)</p>
                 <ul class="features-list">
-                    <li>Up to 3 communities</li>
-                    <li>Up to 200 members</li>
-                    <li>5 active events</li>
-                    <li>PDF exports unlocked</li>
+                    <li><strong>Up to 3 Communities / Groups</strong></li>
+                    <li><strong>Up to 1,000 Registered Members</strong></li>
+                    <li><strong>Up to 10 Active Events</strong> at once</li>
+                    <li><strong>Official PDF &amp; Excel (CSV) Reports</strong></li>
+                    <li>Beneficiary &amp; Member Roster PDFs</li>
+                    <li><strong>Encrypted Local .cerm Backups</strong></li>
                 </ul>
-                <a href="#" class="btn btn-outline" style="width: 100%;">Get on Google Play</a>
+                <a href="https://play.google.com/store/apps/details?id=com.bendevspro.communityeventsrecordsmonitor" target="_blank" rel="noopener" class="btn btn-outline" style="width: 100%;">
+                    Unlock Silver in App
+                </a>
             </div>
 
             <!-- Gold Tier -->
-            <div class="glass-card pricing-card tier-gold">
-                <h3 style="color: var(--amber-accent);">Gold</h3>
-                <div class="price">$3<span style="font-size: 1rem; color: var(--text-secondary);">/mo</span></div>
-                <p class="price-sub">or $32/year (save $4)</p>
+            <div class="pricing-card tier-gold">
+                <div class="tier-header">
+                    <h3 style="color: var(--gold-accent);">Gold</h3>
+                    <span class="tier-badge gold">RECOMMENDED</span>
+                </div>
+                <div class="price" data-monthly="$3" data-yearly="$32">$32<span>/yr</span></div>
+                <p class="price-sub" data-monthly-sub="or $32/year (Save $4)" data-yearly-sub="Billed annually (Save $4 vs monthly)">Billed annually (Save $4 vs monthly)</p>
                 <ul class="features-list">
-                    <li>Up to 10 communities</li>
-                    <li>Up to 1000 members</li>
-                    <li>Up to 15 active events</li>
-                    <li>PDF & Excel (CSV) reports</li>
-                    <li>3 event Campaigners</li>
-                    <li>Cloud Sync</li>
-                    <li>Customer Support</li>
+                    <li><strong>Everything in Silver Included</strong></li>
+                    <li><strong>Up to 7 Communities / Groups</strong></li>
+                    <li><strong>Up to 3,000 Registered Members</strong></li>
+                    <li><strong>Up to 30 Active Events</strong> at once</li>
+                    <li><strong>Automatic Cloud Workspace Sync</strong></li>
+                    <li>Safe Two-Way Multi-Device Merge</li>
+                    <li><strong>Priority Email Customer Support</strong></li>
                 </ul>
-                <a href="#" class="btn btn-outline" style="width: 100%; border-color: var(--amber-accent); color: var(--amber-accent);">Get on Google Play</a>
+                <a href="https://play.google.com/store/apps/details?id=com.bendevspro.communityeventsrecordsmonitor" target="_blank" rel="noopener" class="btn btn-gold" style="width: 100%;">
+                    Unlock Gold in App
+                </a>
             </div>
 
             <!-- Platinum Tier -->
-            <div class="glass-card pricing-card tier-platinum">
-                <span class="tier-badge">PRO</span>
-                <h3 style="color: var(--cyan-accent);">Platinum</h3>
-                <div class="price">$7<span style="font-size: 1rem; color: var(--text-secondary);">/mo</span></div>
-                <p class="price-sub">or $77/year (save $7)</p>
+            <div class="pricing-card tier-platinum">
+                <div class="tier-header">
+                    <h3 style="color: var(--cyan-accent);">Platinum</h3>
+                    <span class="tier-badge">UMBRELLA PRO</span>
+                </div>
+                <div class="price" data-monthly="$7" data-yearly="$77">$77<span>/yr</span></div>
+                <p class="price-sub" data-monthly-sub="or $77/year (Save $7)" data-yearly-sub="Billed annually (Save $7 vs monthly)">Billed annually (Save $7 vs monthly)</p>
                 <ul class="features-list">
-                    <li>Unlimited communities</li>
-                    <li>Unlimited members</li>
-                    <li>Unlimited active events</li>
-                    <li>PDF & Excel reports</li>
-                    <li><strong>Desktop app access</strong></li>
+                    <li><strong>All Gold Features Included</strong></li>
+                    <li><strong>Unlimited Communities &amp; Groups</strong></li>
+                    <li><strong>Unlimited Members &amp; Events</strong></li>
+                    <li><strong>Windows Desktop App Unlock</strong> (Jan 2027)</li>
+                    <li>Cross-Platform Mobile + Desktop Sync</li>
+                    <li><strong>VIP Direct Developer Support</strong></li>
                 </ul>
-                <a href="#" class="btn btn-primary" style="width: 100%;">Get on Google Play</a>
+                <a href="https://play.google.com/store/apps/details?id=com.bendevspro.communityeventsrecordsmonitor" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%;">
+                    Unlock Platinum in App
+                </a>
             </div>
         </div>
 
-        <p class="pricing-note">Please Note: All subscriptions and payments are securely processed exclusively via the Google Play Store app. See the <a href="terms-of-service.html">Terms of Service</a> for billing details.</p>
+        <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 2rem;">
+            All subscriptions are securely billed and managed through the Google Play Store. Review our <a href="terms-of-service.html" style="color: var(--cyan-accent); font-weight: 700;">Terms of Service</a> for billing details.
+        </p>
     </main>
 
     <footer>
         <div class="footer-inner">
             <div class="footer-brand">
-                <a href="index.html" class="logo">CERM <span>Monitor</span></a>
-                <p class="footer-tagline">A digital ledger for communities, built by BenDevsPro.</p>
+                <a href="index.html" class="logo">
+                    <span class="logo-medallion">★</span>
+                    CERM <span>Workspace</span>
+                </a>
+                <p class="footer-tagline">Engineered by BenDevsPro. Empowering communities through transparent, multiplatform financial and in-kind record keeping.</p>
             </div>
             <div class="footer-links-group">
                 <div class="footer-col">
-                    <h4>Product</h4>
+                    <h4>Command Center</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="subscription.html">Pricing</a></li>
-                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="user-guide.html">Treasurer User Guide</a></li>
+                        <li><a href="subscription.html">Plans &amp; Pricing</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Legal</h4>
+                    <h4>Legal &amp; Support</h4>
                     <ul>
                         <li><a href="terms-of-service.html">Terms of Service</a></li>
                         <li><a href="privacy-policy.html">Privacy Policy</a></li>

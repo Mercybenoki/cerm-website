@@ -4,24 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | CERM</title>
-    <meta name="description" content="Privacy Policy for the CERM app — how community data is stored, encrypted, and protected.">
+    <meta name="description" content="Privacy Policy for the CERM app — how community financial and in-kind data is stored, encrypted, and protected.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <a href="#main" class="skip-link">Skip to content</a>
 
     <header>
         <nav>
-            <a href="index.html" class="logo">CERM <span>Monitor</span></a>
+            <a href="index.html" class="logo">
+                <span class="logo-medallion">★</span>
+                CERM <span>Workspace</span>
+            </a>
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="user-guide.html">User Guide</a></li>
                 <li><a href="subscription.html">Pricing</a></li>
                 <li><a href="terms-of-service.html">Terms</a></li>
                 <li><a href="privacy-policy.html" class="active">Privacy</a></li>
+                <li>
+                    <a href="https://play.google.com/store/apps/details?id=com.bendevspro.communityeventsrecordsmonitor" target="_blank" rel="noopener" class="btn btn-primary nav-cta-btn">
+                        Get App
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -31,45 +41,40 @@
             <div class="legal-nav">
                 <a href="privacy-policy.html" aria-current="page">Privacy Policy</a>
                 <a href="terms-of-service.html">Terms of Service</a>
-                <a href="subscription.html">Pricing</a>
+                <a href="subscription.html">Plans &amp; Pricing</a>
+                <a href="user-guide.html">User Guide</a>
             </div>
 
             <h1>Privacy Policy</h1>
-            <div class="last-updated">Last updated: September 2026</div>
+            <div class="last-updated">Last updated: October 2026</div>
             <p class="legal-intro">At BenDevsPro, we take the privacy and security of your community data seriously. This policy explains how the Community Events Records Monitor (CERM) app handles and protects your information.</p>
 
-            <h2>1. Zero knowledge & data minimization</h2>
-            <p>We do not collect personal data of members of your community. The CERM app is built on a Zero Knowledge architecture coupled with strong encryption. This means BenDevsPro has absolutely no ability to read, view, or access the identities, activities, or performance records of your members.</p>
+            <h2>1. Zero Knowledge &amp; Data Minimization</h2>
+            <p>We do not sell, rent, or harvest the personal data of your community members. CERM is built on an offline-first, Zero Knowledge architecture coupled with strong encryption. BenDevsPro does not read or access the identities, phone numbers, pledges, or contribution records of your members.</p>
 
-            <h2>2. Data storage & encryption</h2>
-            <p>Your primary data is stored locally on your device using encrypted SQLCipher databases. When you choose to use our Cloud Sync feature:</p>
+            <h2>2. Local &amp; Cloud Data Encryption</h2>
+            <p>Your primary records are stored locally on your device. When you export a local backup or enable Cloud Workspace Sync:</p>
             <ul>
-                <li>Backup files (.cerm) are strictly locked to your specific user identity via Firebase Authentication UID.</li>
-                <li>Files are secured in transit using AES-256-GCM encryption.</li>
-                <li>Our Firebase Storage rules prohibit any user from reading or writing to folders outside of their own authenticated ID.</li>
+                <li>Local backup archives (<code>.cerm</code>) are encrypted with your user-defined password.</li>
+                <li>Cloud workspace backups are isolated to your authenticated account and masked in the UI (<code>Session ••••-XXXX</code>) to prevent screenshot leaks.</li>
+                <li>All cloud traffic is protected in transit via TLS / AES-256-GCM encryption.</li>
+                <li>Generated PDF and CSV reports are written to a secure temporary cache directory that is automatically purged prior to each new export.</li>
             </ul>
 
-            <h2>3. Third-party services</h2>
-            <p>To provide our services, we use industry-standard third-party providers:</p>
+            <h2>3. Optional Device Permissions</h2>
             <ul>
-                <li><strong>Google Firebase:</strong> Used for secure user authentication and cloud backup storage.</li>
-                <li><strong>RevenueCat:</strong> Used strictly to validate subscription status across Android and Desktop platforms (see our <a href="subscription.html">Pricing page</a>). RevenueCat does not have access to your community ledger data.</li>
+                <li><strong>Contacts Picker:</strong> Used only when you explicitly tap "Pick from contacts" to pre-fill a member's name, phone number, or email. CERM never uploads your address book in the background.</li>
+                <li><strong>Biometric Unlock:</strong> Fingerprint and face recognition are processed strictly by your device's operating system and never leave your device.</li>
             </ul>
 
-            <h2>4. Local access</h2>
-            <p>The app requests local biometric authentication (fingerprint/face unlock) to protect access to the app on your device. This biometric data is processed entirely by your device's operating system and is never transmitted to our servers.</p>
+            <h2>4. Third-Party Services</h2>
+            <ul>
+                <li><strong>Google Firebase:</strong> Used for optional cloud authentication and encrypted workspace synchronization.</li>
+                <li><strong>RevenueCat &amp; Google Play Billing:</strong> Used strictly to verify subscription entitlements across Android and Desktop.</li>
+            </ul>
 
-            <h2>5. Your choices</h2>
-            <p>Cloud Sync is optional — you can use CERM entirely offline if you prefer to keep all data local to your device. You can review billing and cancellation terms on our <a href="terms-of-service.html">Terms of Service</a> page.</p>
-
-            <h2>6. Account and data deletion</h2>
-            <p>You have the right to request the complete deletion of your account and all associated cloud backup data. To request account deletion:</p>
-            <ol>
-                <li>Send an email to <strong>bendevspro@gmail.com</strong> from the email address associated with your account.</li>
-                <li>Use the subject line "Account Deletion Request".</li>
-                <li>We will permanently delete your Firebase Authentication record and all associated .cerm backup files within 7 days.</li>
-            </ol>
-            <p>Note: Because primary ledger data is stored locally on your device, you must also uninstall the application to clear local storage.</p>
+            <h2>5. Account &amp; Data Deletion</h2>
+            <p>You can permanently delete your Cloud Account and all associated cloud backups at any time directly inside the app under <strong>Backups → Account &amp; Recovery Options → Delete Cloud Account</strong>, or by emailing <strong>bendevspro@gmail.com</strong> with the subject line "Account Deletion Request".</p>
 
             <div class="legal-contact">
                 Questions about your privacy? Contact the developer at <a href="mailto:bendevspro@gmail.com">bendevspro@gmail.com</a>.
@@ -80,20 +85,23 @@
     <footer>
         <div class="footer-inner">
             <div class="footer-brand">
-                <a href="index.html" class="logo">CERM <span>Monitor</span></a>
-                <p class="footer-tagline">A digital ledger for communities, built by BenDevsPro.</p>
+                <a href="index.html" class="logo">
+                    <span class="logo-medallion">★</span>
+                    CERM <span>Workspace</span>
+                </a>
+                <p class="footer-tagline">Engineered by BenDevsPro. Empowering communities through transparent, multiplatform financial and in-kind record keeping.</p>
             </div>
             <div class="footer-links-group">
                 <div class="footer-col">
-                    <h4>Product</h4>
+                    <h4>Command Center</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="subscription.html">Pricing</a></li>
-                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="user-guide.html">Treasurer User Guide</a></li>
+                        <li><a href="subscription.html">Plans &amp; Pricing</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Legal</h4>
+                    <h4>Legal &amp; Support</h4>
                     <ul>
                         <li><a href="terms-of-service.html">Terms of Service</a></li>
                         <li><a href="privacy-policy.html">Privacy Policy</a></li>

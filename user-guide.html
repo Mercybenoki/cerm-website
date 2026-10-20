@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master User Guide & Handbook | CERM</title>
+    <meta name="description" content="Complete step-by-step Treasurer Handbook for Community Events Records Monitor (CERM) — learn how to track cash pledges, structured in-kind items, WhatsApp roll calls, and official PDF reports.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <span class="logo-medallion">★</span>
+                CERM <span>Workspace</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="user-guide.html" class="active">User Guide</a></li>
+                <li><a href="subscription.html">Pricing</a></li>
+                <li><a href="terms-of-service.html">Terms</a></li>
+                <li><a href="privacy-policy.html">Privacy</a></li>
+                <li>
+                    <a href="https://play.google.com/store/apps/details?id=com.bendevspro.communityeventsrecordsmonitor" target="_blank" rel="noopener" class="btn btn-primary nav-cta-btn">
+                        Get App
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="section-heading">
+            <span class="eyebrow">Official Treasurer Handbook</span>
+            <h1>Master User Guide &amp; Workflows</h1>
+            <p>Step-by-step instructions for every module in CERM. Search any topic below or copy a module to share with your committee on WhatsApp.</p>
+        </div>
+
+        <div class="guide-search-wrap">
+            <span class="guide-search-icon">🔍</span>
+            <input type="search" id="guideSearchInput" class="guide-search-input" placeholder="Search guide (e.g., In-Kind, Roll Call, PDF, Backup, Phone)...">
+        </div>
+
+        <div class="guide-accordion-list" id="guideAccordionList">
+            <!-- Module 1 -->
+            <article class="guide-card open" id="quick_start">
+                <button class="guide-header-btn" type="button" aria-expanded="true">
+                    <div class="guide-header-left">
+                        <div class="feature-icon" style="background: rgba(255, 179, 0, 0.18); color: var(--gold-accent); margin-bottom: 0;">★</div>
+                        <div>
+                            <span class="guide-module-tag">MODULE 1 • GETTING STARTED</span>
+                            <h3>5-Minute Quick-Start Workflow</h3>
+                            <p>Go from fresh installation to your first WhatsApp &amp; PDF report</p>
+                        </div>
+                    </div>
+                    <span class="guide-chevron">▼</span>
+                </button>
+                <div class="guide-body">
+                    <div class="guide-step-list">
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">1</span>
+                            <div>
+                                <strong>Create Your Community / Group:</strong>
+                                <p>Open <em>Groups &amp; Clans</em> from the home screen and tap <strong>+ New Group</strong>. Enter the group name (e.g., "Awoja Youth Fellowship") and select its default currency (e.g., UGX, KES, USD).</p>
+                            </div>
+                        </div>
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">2</span>
+                            <div>
+                                <strong>Register Your Members:</strong>
+                                <p>Open <em>Members</em> and tap <strong>+ Add Member</strong>. Type details manually or tap <strong>Pick from contacts</strong> to import names, phone numbers, and emails directly from your phonebook.</p>
+                            </div>
+                        </div>
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">3</span>
+                            <div>
+                                <strong>Schedule an Event / Campaign:</strong>
+                                <p>Open <em>Events</em> and tap <strong>+ New Event</strong>. Select the host community, choose whether funds are for "Community Activity" or a specific Beneficiary member, and optionally set a Target Amount, Minimum Pledge, and Deadline.</p>
+                            </div>
+                        </div>
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">4</span>
+                            <div>
+                                <strong>Log Contributions &amp; Share Updates:</strong>
+                                <p>Open the Event's Ledger, tap the <strong>+</strong> button to log Money/Cash or In-Kind items, and use the top-right 3-dot menu to share formatted WhatsApp updates or official PDF reports.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-pro-tip">
+                        <span>💡 <strong>Pro-Tip:</strong> Pin your most active groups, events, and members to the top of their lists using "Pin to Top" in any card's 3-dot menu.</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Module 2 -->
+            <article class="guide-card" id="communities_groups">
+                <button class="guide-header-btn" type="button" aria-expanded="false">
+                    <div class="guide-header-left">
+                        <div class="feature-icon" style="background: rgba(30, 136, 229, 0.2); color: #42A5F5; margin-bottom: 0;">🏛️</div>
+                        <div>
+                            <span class="guide-module-tag">MODULE 2 • WORKSPACE ARCHITECTURE</span>
+                            <h3>Communities &amp; Multi-Group Management</h3>
+                            <p>Independent currencies, lifecycle states &amp; automatic rename cascading</p>
+                        </div>
+                    </div>
+                    <span class="guide-chevron">▼</span>
+                </button>
+                <div class="guide-body">
+                    <div class="guide-step-list">
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">1</span>
+                            <div>
+                                <strong>Independent Group Currencies:</strong>
+                                <p>Each community stores its own currency code (e.g., UGX for a local clan, USD for a diaspora chapter). All events and member statements under that group automatically format figures in its currency.</p>
+                            </div>
+                        </div>
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">2</span>
+                            <div>
+                                <strong>Tap-to-Expand Group Overview Cards:</strong>
+                                <p>Tap any Community Card header to expand its live summary showing default currency, active/total members, and active/total events. Tap the <strong>Members</strong> or <strong>Events</strong> buttons inside the card to jump directly to that group's filtered view.</p>
+                            </div>
+                        </div>
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">3</span>
+                            <div>
+                                <strong>Deactivating vs. Deleting a Group:</strong>
+                                <p>When a temporary committee finishes its work, choose <strong>Mark as Inactive</strong> from the 3-dot menu. This archives the group out of active selectors while preserving 100% of its historical financial records.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-pro-tip">
+                        <span>💡 <strong>Pro-Tip:</strong> Tap the 3-dot menu on any community card and select "Copy Group Summary" for an instant WhatsApp status card.</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Module 3 -->
+            <article class="guide-card" id="member_directory">
+                <button class="guide-header-btn" type="button" aria-expanded="false">
+                    <div class="guide-header-left">
+                        <div class="feature-icon" style="background: rgba(67, 160, 71, 0.2); color: #66BB6A; margin-bottom: 0;">👥</div>
+                        <div>
+                            <span class="guide-module-tag">MODULE 3 • CONTACTS &amp; ROSTERS</span>
+                            <h3>Member Directory &amp; One-Tap Contact Tools</h3>
+                            <p>Tap-to-call, tap-to-email, profile sharing &amp; Member Directory PDFs</p>
+                        </div>
+                    </div>
+                    <span class="guide-chevron">▼</span>
+                </button>
+                <div class="guide-body">
+                    <div class="guide-step-list">
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">1</span>
+                            <div>
+                                <strong>Tap Phone Number to Call or Copy:</strong>
+                                <p>Expand any member card (or open <em>Member History</em>) and tap their phone number to launch your phone's native dialer (<strong>Call Member</strong>) or copy the number to the clipboard.</p>
+                            </div>
+                        </div>
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">2</span>
+                            <div>
+                                <strong>Tap Email Address to Send Email or Copy:</strong>
+                                <p>Tapping a member's email address opens a prompt to launch your default email client (<strong>Send Email</strong>) or copy the address.</p>
+                            </div>
+                        </div>
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">3</span>
+                            <div>
+                                <strong>Export Official Member Directory PDF:</strong>
+                                <p>Tap the <strong>Export PDF</strong> button on the Member Directory header to generate an official Navy &amp; Teal PDF roster of either <em>Active Members Only</em> or <em>Include All</em>.</p>
+                            </div>
+                        </div>
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">4</span>
+                            <div>
+                                <strong>Accounting Deletion Lock:</strong>
+                                <p>Members who have logged financial contributions cannot be permanently deleted. Mark them as <strong>Inactive</strong> instead to hide them from new event pending lists while preserving historical totals.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-pro-tip">
+                        <span>💡 <strong>Pro-Tip:</strong> Open any member's History screen and tap "Copy Statement" to send them a personal itemized statement of all their pledges and payments.</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Module 4 -->
+            <article class="guide-card" id="ledger_in_kind">
+                <button class="guide-header-btn" type="button" aria-expanded="false">
+                    <div class="guide-header-left">
+                        <div class="feature-icon" style="background: rgba(142, 36, 170, 0.2); color: #E040FB; margin-bottom: 0;">🎁</div>
+                        <div>
+                            <span class="guide-module-tag">MODULE 4 • DUAL LEDGER ENGINE</span>
+                            <h3>Cash &amp; Structured In-Kind Ledgers</h3>
+                            <p>Partial payments, structured item quantities, incremental additions &amp; waivers</p>
+                        </div>
+                    </div>
+                    <span class="guide-chevron">▼</span>
+                </button>
+                <div class="guide-body">
+                    <div class="guide-step-list">
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">1</span>
+                            <div>
+                                <strong>Logging Cash Pledges vs. Full Payments:</strong>
+                                <p>Tap <strong>+ → Money / Cash</strong>. If paying in full today, leave "Amount Pledged" blank and enter "Amount Paid Today". If pledging 100,000 and paying 40,000 today, enter both—CERM tracks the 60,000 balance automatically.</p>
+                            </div>
+                        </div>
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">2</span>
+                            <div>
+                                <strong>Logging Structured In-Kind Pledges:</strong>
+                                <p>Tap <strong>+ → In-Kind (Items, Services)</strong>. Enter exact quantities and item names (e.g., Qty: <code>30</code>, Item: <code>Plastic Chairs</code>; Qty: <code>5</code>, Item: <code>Bags of Cement</code>).</p>
+                            </div>
+                        </div>
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">3</span>
+                            <div>
+                                <strong>Adding More In-Kind Items Later:</strong>
+                                <p>Whether a member previously gave cash or items, tap their card's 3-dot menu and select <strong>Add In-Kind Items</strong> (or <strong>+ Add Item</strong>) to attach new items without creating duplicate member cards.</p>
+                            </div>
+                        </div>
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">4</span>
+                            <div>
+                                <strong>Recording Partial Deliveries &amp; Shortfalls:</strong>
+                                <p>Tap <strong>Record Delivery</strong> on an expanded card when items arrive. Enter the quantity delivered today, or mark remaining undeliverable items as <strong>Can't deliver</strong> (shortfall waiver).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-pro-tip">
+                        <span>💡 <strong>Pro-Tip:</strong> Shared reports automatically sum all in-kind items by name across the entire event (e.g., "Chairs: 55/80 received, 25 still expected").</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Module 5 -->
+            <article class="guide-card" id="roll_call_whatsapp">
+                <button class="guide-header-btn" type="button" aria-expanded="false">
+                    <div class="guide-header-left">
+                        <div class="feature-icon" style="background: rgba(244, 81, 30, 0.2); color: #FF6E40; margin-bottom: 0;">📲</div>
+                        <div>
+                            <span class="guide-module-tag">MODULE 5 • WHATSAPP AUTOMATION</span>
+                            <h3>Final Roll Call &amp; Custom WhatsApp Reports</h3>
+                            <p>Locked member numbering, thank-you spotlights &amp; custom emojis</p>
+                        </div>
+                    </div>
+                    <span class="guide-chevron">▼</span>
+                </button>
+                <div class="guide-body">
+                    <div class="guide-step-list">
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">1</span>
+                            <div>
+                                <strong>Locking the Final Roll Call:</strong>
+                                <p>On the <em>Pending</em> tab of an event ledger, tap <strong>Start Roll Call</strong>. CERM permanently assigns fixed numbers (<code>1</code> to <code>N</code>) to all currently pending members.</p>
+                            </div>
+                        </div>
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">2</span>
+                            <div>
+                                <strong>Fixed Numbering as Members Pay:</strong>
+                                <p>As members on the Roll Call contribute, their name clears from the pending slot in shared WhatsApp reports while their assigned number remains fixed—so nobody else's number ever shifts.</p>
+                            </div>
+                        </div>
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">3</span>
+                            <div>
+                                <strong>Customizing Shared Text, Emojis &amp; Thank-You Spotlight:</strong>
+                                <p>Open the Ledger 3-dot menu → <strong>Customize Shared Text</strong>. Add a greeting, enable the automatic <em>Thank the Latest Contributor</em> spotlight (<code>{name}</code>, <code>{amount}</code>, <code>{event}</code>), customize status emojis, and add Mobile Money/Bank payment instructions in the footer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Module 6 -->
+            <article class="guide-card" id="pdf_csv_reports">
+                <button class="guide-header-btn" type="button" aria-expanded="false">
+                    <div class="guide-header-left">
+                        <div class="feature-icon" style="background: rgba(0, 229, 255, 0.16); color: var(--cyan-accent); margin-bottom: 0;">📄</div>
+                        <div>
+                            <span class="guide-module-tag">MODULE 6 • OFFICIAL AUDITING</span>
+                            <h3>Executive PDF &amp; Excel (CSV) Reporting Suite</h3>
+                            <p>4 official Navy &amp; Teal PDF report types + spreadsheet export</p>
+                        </div>
+                    </div>
+                    <span class="guide-chevron">▼</span>
+                </button>
+                <div class="guide-body">
+                    <div class="guide-step-list">
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">1</span>
+                            <div>
+                                <strong>Official Event Financial PDF:</strong>
+                                <p>In the Event Ledger 3-dot menu, tap <strong>Export Official PDF</strong> and choose either <em>Contributors Only</em> or <em>Include Pending</em>.</p>
+                            </div>
+                        </div>
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">2</span>
+                            <div>
+                                <strong>Beneficiary Handover PDF:</strong>
+                                <p>Tap <strong>Export Beneficiary PDF</strong> to generate a clean handover document for presenting funds and in-kind contributions to the beneficiary family.</p>
+                            </div>
+                        </div>
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">3</span>
+                            <div>
+                                <strong>Periodic Multi-Event Community PDF:</strong>
+                                <p>On the Home Screen (<em>Workspace</em>), tap <strong>Periodic PDF</strong> in the Top Participants panel to generate an executive summary across multiple events in a date range.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Module 7 -->
+            <article class="guide-card" id="security_backups_cloud">
+                <button class="guide-header-btn" type="button" aria-expanded="false">
+                    <div class="guide-header-left">
+                        <div class="feature-icon" style="background: rgba(57, 73, 171, 0.25); color: #8C9EFF; margin-bottom: 0;">🛡️</div>
+                        <div>
+                            <span class="guide-module-tag">MODULE 7 • DATA PROTECTION</span>
+                            <h3>Vault Security, .cerm Backups &amp; Cloud Sync</h3>
+                            <p>Local PIN lock, encrypted .cerm archives &amp; two-way cloud merging</p>
+                        </div>
+                    </div>
+                    <span class="guide-chevron">▼</span>
+                </button>
+                <div class="guide-body">
+                    <div class="guide-step-list">
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">1</span>
+                            <div>
+                                <strong>Local Vault PIN &amp; Biometric Unlock:</strong>
+                                <p>Protect your app with a 4-to-6 digit PIN, 2 recovery questions, and optional fingerprint/face unlock.</p>
+                            </div>
+                        </div>
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">2</span>
+                            <div>
+                                <strong>Local Password-Encrypted (.cerm) Backups:</strong>
+                                <p>Open <em>Backups → Generate Local Backup</em> to save an AES-encrypted <code>.cerm</code> archive to your phone or PC storage.</p>
+                            </div>
+                        </div>
+                        <div class="guide-step-item">
+                            <span class="step-num-circle">3</span>
+                            <div>
+                                <strong>Cloud Workspace Sync &amp; Two-Way Merge:</strong>
+                                <p>Sign in to BenDevsPro Cloud and tap <strong>Sync to Cloud Now</strong>. If two devices have changes, CERM's Safe Two-Way Merge combines groups, members, events, and contributions without losing records.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-medallion">★</span>
+                    CERM <span>Workspace</span>
+                </a>
+                <p class="footer-tagline">Engineered by BenDevsPro. Empowering communities through transparent, multiplatform financial and in-kind record keeping.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-col">
+                    <h4>Command Center</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="user-guide.html">Treasurer User Guide</a></li>
+                        <li><a href="subscription.html">Plans &amp; Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal &amp; Support</h4>
+                    <ul>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2026 BenDevsPro. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
